@@ -1,0 +1,16 @@
+{
+  "name": "articles-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "micro"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0"
+  },
+  "dependencies": {
+    "micro": "^9.3.3",
+    "mongoose": "^5.4.0"
+  }
+}

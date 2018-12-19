@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>A Good Read | Articles</title>
+    <link rel="stylesheet" href="static/index.css" />
+  </head>
+  <body>
+    <noscript>You do not have JavaScript enabled 😭</noscript>
+    <main class="content">
+      <h2 class="content__title content__title--no-articles">
+        No Articles Present
+      </h2>
+      <ul class="articles"></ul>
+    </main>
+    <div class="edit">
+      <div class="edit__overlay"></div>
+      <div class="edit__modal">
+        <h3 class="edit__title">Editing</h3>
+        <form id="edit" class="form edit__form">
+          <div class="form__group form__group--horizontal">
+            <div class="form__field">
+              <input class="form__input" name="title" type="text" required/>
+              <label class="form__label" for="title">Title</label>
+            </div>
+            <div class="form__field">
+              <input class="form__input" name="author" type="text" required/>
+              <label class="form__label" for="author">Author</label>
+            </div>
+          </div>
+          <div class="form__field">
+            <input class="form__input" name="image" type="text" required/>
+            <label class="form__label" for="image">Image URL</label>
+          </div>
+          <div class="form__field">
+            <textarea class="form__input" name="content" required></textarea>
+            <label class="form__label" for="content">Content</label>
+          </div>
+        </form>
+        <div class="form__group form__group--horizontal">
+          <button class="button form__button form__button--cancel">Cancel</button>
+          <button class="button form__button form__button--save">Save</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/unfetch/polyfill"></script>
+  <script src="static/index.js"></script>
+</html>

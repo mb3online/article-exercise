@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "alias": "simple-articles",
+  "builds": [
+    {
+      "src": "api/articles/get/index.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "api/articles/update/index.js",
+      "use": "@now/node"
+    },
+    { "src": "index.html", "use": "@now/static" },
+    { "src": "static/*", "use": "@now/static" }
+  ],
+  "env": {
+    "MONGO_URL": "mongodb+srv://admin:WjvtLBJdN09Hms40@simple-articles-zgkh2.mongodb.net/articles?retryWrites=true"
+  },
+  "routes": [
+    {
+      "src": "/api",
+      "dest": "/404.html",
+      "status": 404
+    },
+    {
+      "src": "/api/articles",
+      "dest": "/404.html",
+      "status": 404
+    }
+  ]
+}
