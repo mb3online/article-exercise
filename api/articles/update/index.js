@@ -6,11 +6,11 @@ const update = function update(_id, body) {
 };
 
 module.exports = async function(req, res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', '*');
-  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "*");
+  res.setHeader("Access-Control-Allow-Headers", "*");
 
-  if (req.method !== 'PATCH') res.end('Please PATCH.');
+  if (req.method !== "PATCH") res.end("Please PATCH.");
 
   try {
     const { id, ...body } = await json(req);
@@ -19,7 +19,7 @@ module.exports = async function(req, res) {
       const { ok } = await update(id, body);
       send(res, Boolean(ok) ? 200 : 500);
     }
-  } catch(e) {
+  } catch (e) {
     res.end(`There seems to be an issue. 🤔 [${e.message}]`);
   }
 

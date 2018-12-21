@@ -10,9 +10,9 @@ mongoose.connect(
 module.exports = mongoose.model(
   "Article",
   new mongoose.Schema({
-    name: String,
+    title: String,
     author: String,
-    headerImageUri: String,
-    content: String
+    image: String,
+    content: String,
   })
 );

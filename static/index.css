@@ -55,6 +55,16 @@ h6 {
 
 .articles li {
   width: 100%;
+  padding: 5rem 0;
+  border-bottom: 1px solid #000;
+}
+
+.articles li:first-child {
+  padding-top: 0;
+}
+
+.articles li:last-child {
+  border-bottom: none;
 }
 
 .article {
@@ -92,11 +102,12 @@ h6 {
   background: transparent;
   border: none;
   padding: 0;
+  border-bottom: 1px solid transparent;
 }
 
 .button:hover {
   cursor: pointer;
-  text-decoration: underline;
+  border-bottom-color: var(--coral);
 }
 
 .edit {
